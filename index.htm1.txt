@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>꿀팁 쇼핑몰</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen p-6">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4 text-center">꿀팁 꿀잼 쇼핑몰</h1>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="검색어를 입력하세요"
+      class="w-full p-3 mb-6 border border-gray-300 rounded-xl"
+    />
+    <div id="results" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+  </div>
+
+  <script>
+    const products = [
+      {
+        name: "리빙센스 1단 계란찜기",
+        image:
+          "https://thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image1.jpg",
+        link: "https://link.coupang.com/a/XXXXX",
+        tags: ["계란찜기", "주방", "전자렌지", "가성비"],
+      },
+      {
+        name: "키친아트 라면포트 1.5L",
+        image:
+          "https://thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/product/image2.jpg",
+        link: "https://link.coupang.com/a/YYYYY",
+        tags: ["전기포트", "라면", "라면포트", "생활"],
+      },
+      // 여기다 계속 추가하면 돼
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const resultsBox = document.getElementById("results");
+
+    function render(productsToShow) {
+      resultsBox.innerHTML = product
